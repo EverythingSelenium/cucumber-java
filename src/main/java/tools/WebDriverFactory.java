@@ -10,7 +10,8 @@ public class WebDriverFactory {
     static WebDriver driver;
 
     public void init() {
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Kiran\\Documents\\Kiran\\Software\\Selenium\\chromedriver_win32\\chromedriver.exe");
+        this.driver = new ChromeDriver();
     }
 
     public void cleanUp(){
@@ -18,7 +19,9 @@ public class WebDriverFactory {
             driver.quit();
     }
 
-    public static WebDriver getDriver(){
-        return driver;
+    public WebDriver getDriver(){
+        if(driver == null)
+            init();
+        return this.driver;
     }
 }
