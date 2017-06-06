@@ -7,18 +7,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * Created by Krish on 6/3/2017.
  */
 public class WebDriverFactory {
-    static WebDriver driver;
+    private static WebDriver driver;
 
-    public void init() {
-        driver = new ChromeDriver();
-    }
-
-    public void cleanUp(){
-        if(driver != null)
-            driver.quit();
-    }
+    private WebDriverFactory(){}
 
     public static WebDriver getDriver(){
+        if(driver == null) {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+            driver = new ChromeDriver();
+        }
         return driver;
+    }
+
+    public static void cleanUp(){
+        if(driver != null)
+            driver.quit();
     }
 }

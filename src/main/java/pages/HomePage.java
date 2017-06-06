@@ -2,8 +2,8 @@ package pages;
 
 public class HomePage extends PageObject{
 
-    public void eat(int cukes) {
-        String url = driver.getCurrentUrl();
-        System.out.println(url + cukes);
+    public void navigateToPage(String url) {
+        driver.get("http://" + url);
+        System.out.println(driver.getCurrentUrl());
     }
 }
