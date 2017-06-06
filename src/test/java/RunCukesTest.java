@@ -1,12 +1,11 @@
-package test_runner;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"pretty"},
-        features = {"src/test/resources/features"}
+@CucumberOptions(
+        features = {"src/test/resources/features"},
+        format={"pretty", "html:target/cucumber"}
 
 )
 public class RunCukesTest {
