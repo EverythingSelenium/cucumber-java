@@ -1,6 +1,5 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -12,16 +11,15 @@ import tools.WebDriverFactory;
 public class Stepdefs {
 
     HomePage homePage = new HomePage();
-    WebDriverFactory webDriverFactory = new WebDriverFactory();
+
     @Before
     public void setup(){
-        webDriverFactory.init();
 
     }
 
     @After
     public void cleanup(){
-        webDriverFactory.cleanUp();
+        WebDriverFactory.cleanUp();
     }
 
     @Given("^I am on the home page of (.*)$")
