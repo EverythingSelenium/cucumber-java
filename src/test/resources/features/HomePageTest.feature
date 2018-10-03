@@ -1,4 +1,5 @@
 Feature: Redfin Search
+  @homepage
 
   Scenario: Verify the address search returns the correct result
     Given I am on the home page of redfin.com
