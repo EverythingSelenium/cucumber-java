@@ -4,9 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features"},
-        format={"pretty", "html:target/cucumber"}
-
+        features = {"src/test/resources/features"},tags = {"@homepage","~@skip"}
 )
 public class RunCukesTest {
 
