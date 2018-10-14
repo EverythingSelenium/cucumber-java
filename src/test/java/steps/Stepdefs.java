@@ -44,4 +44,9 @@ public class Stepdefs {
         assertTrue(resultPage.getResultHeaderLabelText().contains(String.valueOf(zipcode)));
     }
 
+    @Then("the page displays the results with zipcode (.*)")
+    public void the_page_displays_the_results_with_zipcode(String zipcode) {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
 }
