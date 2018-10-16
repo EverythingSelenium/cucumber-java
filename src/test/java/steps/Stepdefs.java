@@ -27,18 +27,6 @@ public class Stepdefs {
         WebDriverFactory.cleanUp();
     }
 
-    @Given("^I am on the home page of (.*)$")
-    public void i_am_on_the_home_page_of_redfin_com(String url) {
-        // Write code here that turns the phrase above into concrete actions
-        homePage.navigateToPage(url);
-    }
-
-    @When("^I search for (\\d+) on the home page$")
-    public void i_search_for_on_the_home_page(int zipcode) throws Throwable {
-        homePage.enterTextIntoSearchField(String.valueOf(zipcode));
-        homePage.clickOnSearchButton();
-    }
-
     @Then("^the search result page displays the results with zipcode (\\d+)$")
     public void the_search_result_page_displays_the_correct_results(int zipcode) throws Throwable {
         assertTrue(resultPage.getResultHeaderLabelText().contains(String.valueOf(zipcode)));
