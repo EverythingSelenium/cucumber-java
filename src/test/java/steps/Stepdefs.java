@@ -48,5 +48,9 @@ public class Stepdefs {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
-
+    @Given("^I am on the home page of (.*)$")
+    public void i_am_on_the_home_page_of_redfin_com(String url) {
+        // Write code here that turns the phrase above into concrete actions
+        homePage.navigateToPage(url);
+    }
 }
