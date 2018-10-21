@@ -2,10 +2,9 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.HomePage;
+import pages.Header;
 import pages.ResultPage;
 import tools.WebDriverFactory;
 
@@ -14,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Stepdefs {
 
-    private HomePage homePage = new HomePage();
+    private Header header = new Header();
     private ResultPage resultPage = new ResultPage();
 
     @Before
@@ -40,6 +39,7 @@ public class Stepdefs {
     @When("I click on the (.*) link on the home page")
     public void i_click_on_the_link_on_the_home_page(String linkText) {
         // Write code here that turns the phrase above into concrete actions
+
         throw new cucumber.api.PendingException();
     }
 

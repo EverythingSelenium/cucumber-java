@@ -2,17 +2,14 @@ package pages;
 
 import org.openqa.selenium.By;
 
-public class HomePage extends PageObject{
+public class Header extends Base{
 
-    //all the By objects goes here
+    //all the locators goes here
     private By searchBoxInput = By.id("search-box-input");
     private By searchButton = By.cssSelector("button.SearchButton");
 
 
     //all the methods goes here
-    public void navigateToPage(String url) {
-        driver.get("http://" + url);
-    }
 
     public void enterTextIntoSearchField(String text){
         driver.findElement(searchBoxInput).sendKeys(text);
