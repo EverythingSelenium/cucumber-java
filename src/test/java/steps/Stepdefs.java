@@ -5,6 +5,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.HeaderPage;
 import pages.HomePage;
 import pages.ResultPage;
 import tools.WebDriverFactory;
@@ -16,6 +17,7 @@ public class Stepdefs {
 
     private HomePage homePage = new HomePage();
     private ResultPage resultPage = new ResultPage();
+    private HeaderPage headerPage =new HeaderPage();
 
     @Before
     public void setup(){
