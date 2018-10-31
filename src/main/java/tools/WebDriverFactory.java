@@ -13,7 +13,7 @@ public class WebDriverFactory {
 
     public static WebDriver getDriver(){
         if(driver == null) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
