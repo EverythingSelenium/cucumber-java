@@ -67,7 +67,7 @@ public class Test{
 }
 ```
 ----
-####`Sleep` is not your friend
+#### `Sleep` is not your friend
 ###### `wait`, using `javascriptExecutor()` to check for a variable 
  * set a variable, then clear that variable when the process is complete. Check for the variable using `javascriptExecutor()` rather than `Thread.sleep()`.
 ----
