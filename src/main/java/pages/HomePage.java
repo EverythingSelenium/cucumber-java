@@ -28,4 +28,13 @@ public class HomePage extends PageObject{
             e.printStackTrace();
         }
     }
+
+    public boolean isAPageDisplayed(String page){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return driver.getTitle().toLowerCase().contains(page);
+    }
 }

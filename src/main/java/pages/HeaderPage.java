@@ -32,10 +32,10 @@ public class HeaderPage extends PageObject {
             case "tshirts":
                 $(tShirts).click();
                 break;
-            case "contactuslink":
+            case "contactus":
                 $(contactUs).click();
                 break;
-            case "signinlink":
+            case "signin":
                 $(signin).click();
                 break;
             case "icon":
