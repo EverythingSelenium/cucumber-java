@@ -41,14 +41,13 @@ public class Stepdefs {
 
     @When("I click on the (.*) link on the home page")
     public void i_click_on_the_link_on_the_home_page(String linkText) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        headerPage.clickOnOption(linkText);
     }
 
     @Then("I am navigated to the (.*) page")
     public void i_am_navigated_to_the_page(String page) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        homePage.isAPageDisplayed(page);
+
     }
     @Given("^I am on the home page of (.*)$")
     public void i_am_on_the_home_page_of_redfin_com(String url) {
