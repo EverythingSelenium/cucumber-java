@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-import tools.WebDriverFactory;
+import util.WebDriverFactory;
 
 
 /**

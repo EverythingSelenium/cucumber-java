@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 
-public class Header extends Base{
+public class HeaderPage extends BasePage {
 
     //all the locators goes here
     private By searchBoxInput = By.id("search-box-input");

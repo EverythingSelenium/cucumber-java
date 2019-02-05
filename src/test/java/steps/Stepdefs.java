@@ -2,19 +2,22 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.Header;
+import pages.BasePage;
+import pages.HeaderPage;
 import pages.ResultPage;
-import tools.WebDriverFactory;
+import util.WebDriverFactory;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Stepdefs {
 
-    private Header header = new Header();
+    private HeaderPage headerPage = new HeaderPage();
     private ResultPage resultPage = new ResultPage();
+    private BasePage basePage = new BasePage();
 
     @Before
     public void setup(){
@@ -48,9 +51,10 @@ public class Stepdefs {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
+
     @Given("^I am on the home page of (.*)$")
-    public void i_am_on_the_home_page_of_redfin_com(String url) {
+    public void i_am_on_the_home_page_of_com(String url) {
         // Write code here that turns the phrase above into concrete actions
-        homePage.navigateToPage(url);
+        basePage.navigateToPage(url);
     }
 }
