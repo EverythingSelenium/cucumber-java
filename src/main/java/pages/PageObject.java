@@ -2,9 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import util.WebDriverFactory;
 import org.openqa.selenium.WebElement;
-import tools.WebDriverFactory;
-
 
 /**
  * Created by Krish on 6/3/2017.
