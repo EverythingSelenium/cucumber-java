@@ -1,5 +1,5 @@
 # Cucumber-Java
-
+[![Build Status](https://travis-ci.com/GaurangB/cucumber-java.svg?branch=dev)](https://travis-ci.com/GaurangB/cucumber-java)
 
 This is a simple Cucumber - Java - Selenium project
 

@@ -10,7 +10,6 @@ import pages.HeaderPage;
 import pages.ResultPage;
 import util.WebDriverFactory;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Stepdefs {
@@ -41,15 +40,12 @@ public class Stepdefs {
 
     @When("I click on the (.*) link on the home page")
     public void i_click_on_the_link_on_the_home_page(String linkText) {
-        // Write code here that turns the phrase above into concrete actions
 
-        throw new cucumber.api.PendingException();
     }
 
     @Then("I am navigated to the (.*) page")
     public void i_am_navigated_to_the_page(String page) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
     }
 
     @Given("^I am on the home page of (.*)$")
