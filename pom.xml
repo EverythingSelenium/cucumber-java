@@ -9,7 +9,7 @@
     <name>Cucumber-Java</name>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
         <cucumber.version>4.0.0</cucumber.version>
         <selenium.version>3.14.0</selenium.version>
