@@ -2,6 +2,7 @@ package util;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by Krish on 6/3/2017.
@@ -21,7 +22,9 @@ public class WebDriverFactory {
     }
 
     public static void cleanUp(){
-        if(driver != null)
+        if(driver != null) {
             driver.quit();
+            driver = null;
+        }
     }
 }

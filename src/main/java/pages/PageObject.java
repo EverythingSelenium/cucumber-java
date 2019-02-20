@@ -9,9 +9,13 @@ import org.openqa.selenium.WebElement;
  * Created by Krish on 6/3/2017.
  */
 public class PageObject {
-    WebDriver driver = WebDriverFactory.getDriver();
+    protected static WebDriver driver;
 
-    public WebElement $(By locator){
-       return driver.findElement(locator);
+    public static void setup() {
+        driver = WebDriverFactory.getDriver();
+    }
+
+    protected WebElement $(By locator){
+        return driver.findElement(locator);
     }
 }
