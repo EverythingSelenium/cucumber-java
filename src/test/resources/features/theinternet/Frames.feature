@@ -15,5 +15,5 @@ Feature: IFrame Editor
     And I click on the bold option of the sub menu
     Then the text 'Your content goes here.' is formatted to bold.
     And the name of the movie is someMovie and the rating is 10
-    And the name of the person TRUE and age is 10
-    And the name of the person FALSE and age is 25
+    And the name of the person and age is 10
+    And the name of the person and age is 25

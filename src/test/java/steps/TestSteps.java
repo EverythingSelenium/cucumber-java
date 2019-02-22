@@ -4,10 +4,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import pages.theinternet.HoverPage;
 
 import java.util.List;
 
 public class TestSteps {
+
+    HoverPage hoverPage = new HoverPage();
+
     @Given("Some (.+) statement")
     public void some_given_statement(String some, DataTable dataTable) {
         List<String> strings = dataTable.asList(String.class);
@@ -65,4 +69,14 @@ public class TestSteps {
     public void i_am_able_to_login() {
         // Write code here that turns the phrase above into concrete actions
     }
+    @Given("just test")
+    public void just_test() {
+
+    }
+
+    @When("i test switch case (\\d+).")
+    public void i_test_switch_case(int number) {
+        System.out.println("number = " + number);
+    }
+
 }
