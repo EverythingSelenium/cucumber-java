@@ -63,5 +63,10 @@ public class ContactUsSteps {
         List<String> message = dataTable.asList(String.class);
         Assert.assertEquals(message.get(0),contactUsPage.getConfirmationMessage());
     }
+    @When("i click on checkboxes")
+    public void i_click_on_checkboxes() {
+
+    }
+
 
 }

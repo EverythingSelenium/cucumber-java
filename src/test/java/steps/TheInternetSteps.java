@@ -12,6 +12,7 @@ public class TheInternetSteps {
     private DragAndDropPage dragAndDropPage = new DragAndDropPage();
     private DynamicLoadingPage dynamicLoadingPage = new DynamicLoadingPage();
     private DynamicControlsPage dynamicControlsPage =new DynamicControlsPage();
+    private CheckboxesPage checkboxesPage = new CheckboxesPage();
 
     @Given("I am in the home page of (.*)")
     public void i_am_in_the_home_page_of(String url) {
@@ -115,6 +116,26 @@ public class TheInternetSteps {
     @When("^I enter the text '(.+)' on Dynamic Controls page$")
     public void i_enter_the_text_on_dynamic_controls_page(String message){
         dynamicControlsPage.sendMessage(message);
+    }
+
+    @When("^i click on checkbox (\\d+)$")
+    public void i_click_on_checkbox(int index) {
+        checkboxesPage.clickOnCheckbox(index);
+    }
+
+    @When("^i click on checkbox (\\d+) on checkbox page$")
+    public void i_click_on_checkbox_on_checkbox_page(int index) {
+        checkboxesPage.clickOnCheckbox(index);
+    }
+
+    @Then("^verify checkbox (\\d+) is selected$")
+    public void verify_checkbox_is_selected(int index1) {
+        Assert.assertTrue(checkboxesPage.isCheckBoxSelected(index1));
+    }
+
+    @Then("^verify checkbox (\\d+) is unselected$")
+    public void verify_checkbox_is_unselected(int index2) {
+        Assert.assertFalse(checkboxesPage.isCheckBoxSelected(index2));
 
     }
 }

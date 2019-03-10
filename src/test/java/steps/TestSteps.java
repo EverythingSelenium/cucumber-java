@@ -4,6 +4,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import org.openqa.selenium.By;
+import pages.theinternet.DynamicControlsPage;
+import pages.theinternet.DynamicLoadingPage;
 import pages.theinternet.HoverPage;
 
 import java.util.List;
@@ -11,6 +14,8 @@ import java.util.List;
 public class TestSteps {
 
     HoverPage hoverPage = new HoverPage();
+    DynamicControlsPage dynamictest = new DynamicControlsPage();
+    By loadingBar = By.cssSelector("#loading:not([style='display: none;'])");
 
     @Given("Some (.+) statement")
     public void some_given_statement(String some, DataTable dataTable) {
@@ -63,20 +68,6 @@ public class TestSteps {
     public void i_enter_the_password_as(String password) {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("password = " + password);
-    }
-
-    @Then("I am able to login")
-    public void i_am_able_to_login() {
-        // Write code here that turns the phrase above into concrete actions
-    }
-    @Given("just test")
-    public void just_test() {
-
-    }
-
-    @When("i test switch case (\\d+).")
-    public void i_test_switch_case(int number) {
-        System.out.println("number = " + number);
     }
 
 }
