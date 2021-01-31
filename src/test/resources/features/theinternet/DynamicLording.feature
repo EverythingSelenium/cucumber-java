@@ -1,3 +1,4 @@
+@DynamicLoading @Regression
 Feature:Dynamic Loading
   Background:
     Given I am in the home page of https://the-internet.herokuapp.com/
@@ -5,7 +6,7 @@ Feature:Dynamic Loading
     And navigate to Example 1: Element on page that is hidden page
 
 
-
+  @Smoke
   Scenario:verify a user is able to Dynamic Loading page
     When I click on start button on Dynamic Loading Page
     And I wait for loading bar

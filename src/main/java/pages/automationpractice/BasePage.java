@@ -13,7 +13,7 @@ public class BasePage extends PageObject {
         driver.get(url);
     }
     public String getCurrentTItle(){
-       return driver.getTitle();
+        return driver.getTitle();
     }
 
     public void enterEmailId(String email){

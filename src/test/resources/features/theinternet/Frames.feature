@@ -1,3 +1,4 @@
+@Regression
 Feature: IFrame Editor
 
   Background:
@@ -15,5 +16,5 @@ Feature: IFrame Editor
     And I click on the bold option of the sub menu
     Then the text 'Your content goes here.' is formatted to bold.
     And the name of the movie is someMovie and the rating is 10
-    And the name of the person and age is 10
+    And the name of the person and age is 33
     And the name of the person and age is 25

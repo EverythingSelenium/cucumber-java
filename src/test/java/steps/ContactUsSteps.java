@@ -1,9 +1,9 @@
 package steps;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.automationpractice.BasePage;
 import pages.automationpractice.ContactUsPage;
@@ -27,7 +27,7 @@ public class ContactUsSteps {
         basePage.navigateToPage(url);
     }
 
-    @When("I Select subject heading as (.+)")
+    @When("I Select subject heading as {}")
     public void i_Select_subject_heading_as_(String option) {
         int index = 0;
         switch (option.toLowerCase()) {
@@ -43,7 +43,7 @@ public class ContactUsSteps {
         contactUsPage.selectSubjectHeading(index);
     }
 
-    @When("I Enter email address as (.+)")
+    @When("I Enter email address as {}")
     public void i_Enter_email_address_as_(String email) {
         contactUsPage.enterEmailId(email);
     }
