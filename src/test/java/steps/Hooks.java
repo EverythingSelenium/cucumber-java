@@ -1,19 +1,19 @@
 package steps;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import pages.PageObject;
 import util.WebDriverFactory;
 
 public class Hooks {
 
-    @Before
-    public void setup(){
+    @Before("@ui")
+    public void setup() {
         PageObject.setup();
     }
 
-    @After
-    public void cleanup(){
+    @After("@ui")
+    public void cleanup() {
         WebDriverFactory.cleanUp();
     }
 }

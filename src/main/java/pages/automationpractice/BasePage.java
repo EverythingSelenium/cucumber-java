@@ -12,11 +12,12 @@ public class BasePage extends PageObject {
 
         driver.get(url);
     }
-    public String getCurrentTItle(){
-       return driver.getTitle();
+
+    public String getCurrentTItle() {
+        return driver.getTitle();
     }
 
-    public void enterEmailId(String email){
+    public void enterEmailId(String email) {
         WebElement emailIdInput = driver.findElement(emailID);
         emailIdInput.clear();
         emailIdInput.sendKeys(email);
