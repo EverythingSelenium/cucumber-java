@@ -7,12 +7,12 @@ import util.WebDriverFactory;
 
 public class Hooks {
 
-    @Before
+    @Before("@ui")
     public void setup(){
         PageObject.setup();
     }
 
-    @After
+    @After("@ui")
     public void cleanup(){
         WebDriverFactory.cleanUp();
     }

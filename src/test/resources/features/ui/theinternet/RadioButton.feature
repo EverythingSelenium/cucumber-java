@@ -1,3 +1,4 @@
+@ui
 Feature:Radio Button Feature
 
   Scenario: Test User ID field 1

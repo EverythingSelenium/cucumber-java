@@ -1,4 +1,4 @@
-@ContactUs
+@ContactUs @ui
 Feature:  Contact Us
 
   Background:

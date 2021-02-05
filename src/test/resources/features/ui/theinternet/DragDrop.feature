@@ -1,3 +1,4 @@
+@ui
 Feature:Drag And Drop
   Background:
     Given I am in the home page of https://the-internet.herokuapp.com/

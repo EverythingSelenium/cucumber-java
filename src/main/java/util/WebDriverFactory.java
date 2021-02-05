@@ -21,12 +21,12 @@ public class WebDriverFactory {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
             URL url = null;
             try {
-                url = new URL("http://192.168.86.81:4444/wd/hub");
+                 url = new URL("http://192.168.86.81:4444/wd/hub");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("headless");
+//            chromeOptions.addArguments("headless");
             driver = new RemoteWebDriver(url, chromeOptions);
             driver.manage().window().maximize();
         }

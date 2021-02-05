@@ -1,4 +1,4 @@
-@Regression
+@Regression @ui
 Feature: IFrame Editor
 
   Background:

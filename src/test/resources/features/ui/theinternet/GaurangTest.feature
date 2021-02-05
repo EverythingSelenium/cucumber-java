@@ -1,3 +1,4 @@
+@ui
 Feature: Test
 
   Scenario: Verify google search works for city

@@ -1,4 +1,4 @@
-@DynamicControl @Regression
+@DynamicControl @Regression @ui
 Feature:Dynamic Controls
   Narrative: As a user I should be able to use dynamic controls
 
