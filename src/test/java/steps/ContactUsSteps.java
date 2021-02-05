@@ -11,6 +11,7 @@ import pages.automationpractice.HeaderPage;
 import pages.automationpractice.ResultPage;
 
 import java.util.List;
+
 import static org.junit.Assert.fail;
 
 public class ContactUsSteps {
@@ -55,14 +56,15 @@ public class ContactUsSteps {
 
     @When("I click on send button on contact us page")
     public void i_click_on_send_button_on_contact_us_page() {
-       contactUsPage.clickOnSendButton();
+        contactUsPage.clickOnSendButton();
     }
 
     @Then("the following confirmation message is displayed")
     public void the_following_confirmation_message_is_displayed(DataTable dataTable) {
         List<String> message = dataTable.asList(String.class);
-        Assert.assertEquals(message.get(0),contactUsPage.getConfirmationMessage());
+        Assert.assertEquals(message.get(0), contactUsPage.getConfirmationMessage());
     }
+
     @When("i click on checkboxes")
     public void i_click_on_checkboxes() {
 

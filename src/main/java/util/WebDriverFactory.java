@@ -1,6 +1,7 @@
 package util;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -17,24 +18,31 @@ public class WebDriverFactory {
     }
 
     public static WebDriver getDriver() {
-        if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-            URL url = null;
-            try {
-                 url = new URL("http://192.168.86.81:4444/wd/hub");
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-            ChromeOptions chromeOptions = new ChromeOptions();
+
+        boolean flag = false;
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
 //            chromeOptions.addArguments("headless");
-            driver = new RemoteWebDriver(url, chromeOptions);
-            driver.manage().window().maximize();
+
+        if (flag) {
+            if (driver == null) {
+                URL url = null;
+                try {
+                    url = new URL("http://localhost:4444/wd/hub");
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                driver = new RemoteWebDriver(url, chromeOptions);
+            }
+        } else {
+            driver = new ChromeDriver();
         }
+        driver.manage().window().maximize();
         return driver;
     }
 
-    public static void cleanUp(){
-        if(driver != null) {
+    public static void cleanUp() {
+        if (driver != null) {
             driver.quit();
             driver = null;
         }

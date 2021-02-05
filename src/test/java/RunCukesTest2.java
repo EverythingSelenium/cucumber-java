@@ -10,8 +10,4 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber2.html"}
 )
 public class RunCukesTest2 {
-
-
-
-    //features = “@target/rerun.txt”
 }

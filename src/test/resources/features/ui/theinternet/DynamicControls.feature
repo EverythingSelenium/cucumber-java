@@ -11,30 +11,30 @@ Feature:Dynamic Controls
   @ID001
   Scenario:user is able to verify Dynamic Control page
     When I click on enable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     And I enter the text 'This is a test of editable field' on Dynamic Controls page
     Then the text 'It's enabled!' is displayed on Dynamic Control page
     When I click on disable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     Then the text 'It's disabled!' is displayed on Dynamic Control page
 
   @Smoke
   @ID002
   Scenario:user is able to verify Dynamic Control page
     When I click on enable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     And I enter the text 'This is a test of editable field' on Dynamic Controls page
     Then the text 'It's enabled!' is displayed on Dynamic Control page
     When I click on disable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     Then the text 'It's disabled!' is displayed on Dynamic Control page
 
   @ID003 @Smoke
   Scenario:user is able to verify Dynamic Control page
     When I click on enable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     And I enter the text 'This is a test of editable field' on Dynamic Controls page
     Then the text 'It's enabled!' is displayed on Dynamic Control page
     When I click on disable button on Dynamic Controls Page
-    And I wait for bar to disapper
+    And I wait for bar to disappear
     Then the text 'It's disabled!' is displayed on Dynamic Control page

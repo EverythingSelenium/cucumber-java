@@ -8,12 +8,12 @@ import util.WebDriverFactory;
 public class Hooks {
 
     @Before("@ui")
-    public void setup(){
+    public void setup() {
         PageObject.setup();
     }
 
     @After("@ui")
-    public void cleanup(){
+    public void cleanup() {
         WebDriverFactory.cleanUp();
     }
 }

@@ -11,7 +11,7 @@ public class TheInternetSteps {
     private HoverPage hoverPage = new HoverPage();
     private DragAndDropPage dragAndDropPage = new DragAndDropPage();
     private DynamicLoadingPage dynamicLoadingPage = new DynamicLoadingPage();
-    private DynamicControlsPage dynamicControlsPage =new DynamicControlsPage();
+    private DynamicControlsPage dynamicControlsPage = new DynamicControlsPage();
     private CheckboxesPage checkboxesPage = new CheckboxesPage();
 
     @Given("I am in the home page of {}")
@@ -24,28 +24,28 @@ public class TheInternetSteps {
         framesPage.clickLinkOnHomePage(page);
     }
 
-    @When("I click on the (.*) option of the main menu")
+    @When("I click on the {} option of the main menu")
     public void i_click_on_the_option_of_the_main_menu(String option) {
         framesPage.clickOnMainMenuItem(option);
     }
 
-    @When("I click on the (.*) option of the sub menu")
+    @When("I click on the {} option of the sub menu")
     public void i_click_on_the_option_of_the_sub_menu(String option) {
-       framesPage.clickOnSubMenuItem(option);
+        framesPage.clickOnSubMenuItem(option);
     }
 
-    @Then("the text '(.*)' is formatted to (.*).")
+    @Then("the text '{}' is formatted to {}.")
     public void the_text_is_formatted_to_bold(String text, String format) {
-        Assert.assertTrue(framesPage.isTextInsideFrameFormatted(format,text));
+        Assert.assertTrue(framesPage.isTextInsideFrameFormatted(format, text));
     }
 
-    @Then("the body has the message as '(.*)'")
+    @Then("the body has the message as '{}'")
     public void the_body_has_the_message_as(String message) {
-        Assert.assertEquals(message,framesPage.getTheMessageFromFrame());
+        Assert.assertEquals(message, framesPage.getTheMessageFromFrame());
     }
 
-    @Then("the name of the movie is (.*) and the rating is {int}")
-    public void someMovieThing(String movie, int rating){
+    @Then("the name of the movie is {} and the rating is {int}")
+    public void someMovieThing(String movie, int rating) {
         System.out.println("rating = " + rating);
     }
 
@@ -67,14 +67,14 @@ public class TheInternetSteps {
 
     @When("I drag element {} to element {} on drag and drop page")
     public void i_drag_element_to_element_on_drag_and_drop_page(String source, String target) {
-        dragAndDropPage.dragSourceToTarget(source,target);
+        dragAndDropPage.dragSourceToTarget(source, target);
 
     }
 
     @Then("element {} is in first column and element {} is in second column")
-    public void element_is_in_first_column_and_element_is_in_second_column(String columnA ,String columnB) {
-       Assert.assertEquals(columnA,dragAndDropPage.getValueInColumnA());
-       Assert.assertEquals(columnB,dragAndDropPage.getValueInColumnB());
+    public void element_is_in_first_column_and_element_is_in_second_column(String columnA, String columnB) {
+        Assert.assertEquals(columnA, dragAndDropPage.getValueInColumnA());
+        Assert.assertEquals(columnB, dragAndDropPage.getValueInColumnB());
     }
 
     @When("I run the guru drag and drop")
@@ -95,26 +95,27 @@ public class TheInternetSteps {
 
     @Then("the text '{}' is displayed")
     public void the_text_is_displayed(String text) {
-       String actualText = dynamicLoadingPage.getHelloWorldText();
-       Assert.assertEquals(actualText,text);
+        String actualText = dynamicLoadingPage.getHelloWorldText();
+        Assert.assertEquals(actualText, text);
     }
 
     @When("I click on {} button on Dynamic Controls Page")
     public void i_click_button_on_dynamic_controls_page(String arg1) {
-       dynamicControlsPage.clickOnEnableDisable();
+        dynamicControlsPage.clickOnEnableDisable();
     }
 
-    @When("I wait for bar to disapper")
+    @When("I wait for bar to disappear")
     public void i_wait_for_bar_to_disapper() {
-       dynamicControlsPage.waitForEnable_DisableBarToDisapper();
+        dynamicControlsPage.waitForEnable_DisableBarToDisapper();
     }
 
     @Then("the text '{}' is displayed on Dynamic Control page")
     public void the_text_s_enabled_is_displayed_on_Dynamic_Control_page(String message) {
-        Assert.assertEquals(message,dynamicControlsPage.getMessageText());
+        Assert.assertEquals(message, dynamicControlsPage.getMessageText());
     }
+
     @When("I enter the text '{}' on Dynamic Controls page")
-    public void i_enter_the_text_on_dynamic_controls_page(String message){
+    public void i_enter_the_text_on_dynamic_controls_page(String message) {
         dynamicControlsPage.sendMessage(message);
     }
 

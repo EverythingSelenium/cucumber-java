@@ -9,7 +9,7 @@ Feature: Hover Over
     When I hover over <figure> on hover page
     Then The user name is displayed as <userName>
     Examples:
-    |figure|userName|
-    |figure1|user1  |
-    |figure2|user2  |
-    |figure3|user3  |
+      | figure  | userName |
+      | figure1 | user1    |
+      | figure2 | user2    |
+      | figure3 | user3    |

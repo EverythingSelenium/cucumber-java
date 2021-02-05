@@ -13,7 +13,7 @@ public class DynamicLoadingPage extends InternetBasePage {
     By helloWorldText = By.cssSelector("#finish>h4");
 
 
-    public void clickOnStartButton(){
+    public void clickOnStartButton() {
         driver.findElement(startButton).click();
     }
 

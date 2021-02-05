@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 public class HeaderPage extends BasePage {
     By contactUsLink = By.cssSelector("#contact-link");
 
-    public void clickContactUsLink(){
+    public void clickContactUsLink() {
         WebElement contactUsLinkElement = driver.findElement(contactUsLink);
         contactUsLinkElement.click();
     }
